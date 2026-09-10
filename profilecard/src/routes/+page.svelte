@@ -56,8 +56,12 @@
     max-width: 520px;
     margin-inline: auto;
     display: grid;
-    place-items: center;
+    place-content: center;
     justify-items: center;
+    min-height: 100svh;
+    padding: 3rem 1.25rem;
+
+    animation: entrance 0.8s ease both;
   }
 
   header img {
@@ -86,7 +90,6 @@
     align-content: center;
   }
 
-  header,
   section {
     min-height: 100svh;
     padding: 3rem 1.25rem;
