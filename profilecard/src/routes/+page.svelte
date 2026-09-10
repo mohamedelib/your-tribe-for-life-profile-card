@@ -1,12 +1,7 @@
 <!-- Header -->
 
 <header>
-  <img
-    src="src/lib/assets/mo.jpg"
-    alt="Mohamed El Ibrahymy"
-    width="150"
-    height="150"
-  />
+  <img src="src/lib/assets/mo.jpg" alt="Mohamed El Ibrahymy" />
   <article>
     <h1>Mohamed <span>El Ibrahymy</span></h1>
     <p>Frontend Developer</p>
@@ -152,13 +147,28 @@
   /* Responsiveness */
   @media (min-width: 40em) {
     header {
-      max-width: 700px;
+      max-width: 1000px;
       grid-template-columns: auto 1fr;
       gap: 2.5rem;
       text-align: left;
 
+      article {
+        align-content: center;
+      }
+      img {
+        max-width: 300px;
+      }
       h1 {
         font-size: 2.8rem;
+      }
+    }
+
+    section {
+      max-width: 1000px;
+      h2,
+      p,
+      span {
+        font-size: 2rem;
       }
     }
   }
