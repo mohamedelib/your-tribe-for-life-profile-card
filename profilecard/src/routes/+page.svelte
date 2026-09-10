@@ -52,7 +52,6 @@
 </main>
 
 <style>
-  @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap");
   :global(body) {
     background: #060606;
     color: #e8e8e8;
