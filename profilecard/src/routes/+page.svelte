@@ -4,7 +4,7 @@
   <picture>
     <source srcset="src/lib/assets/mo.webp" type="image/webp" />
     <img
-      src="src/lib/assets/mo.jpg?w=400&h=400&format=webp"
+      src="src/lib/assets/mo.jpg"
       alt="Mohamed El Ibrahymy"
       fetchpriority="high"
     />
