@@ -69,6 +69,11 @@
       max-width: 200px;
       box-shadow: 0 0 30px rgba(204, 34, 34, 0.25);
       border-radius: 10px;
+      transition: border-color 3s;
+
+      &:hover {
+        border: 1px solid #c22;
+      }
     }
 
     h1 {
