@@ -126,3 +126,17 @@
     color: #666;
   }
 
+  @media (min-width: 40em) {
+    header {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      text-align: left;
+      justify-content: center;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+    }
+  }
+</style>
