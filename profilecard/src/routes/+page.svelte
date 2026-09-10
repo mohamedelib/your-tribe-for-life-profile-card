@@ -78,3 +78,9 @@
     font-size: 0.8rem;
     margin-top: 0.5rem;
   }
+
+  section {
+    max-width: 520px;
+    margin-inline: auto;
+    padding-block: 3rem;
+  }
