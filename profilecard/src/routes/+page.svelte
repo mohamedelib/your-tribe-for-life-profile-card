@@ -97,3 +97,17 @@
     line-height: 1.75;
   }
 
+  ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  li {
+    font-size: 0.75rem;
+    color: #666;
+    padding: 0.35rem 0.8rem;
+    border: 1px solid #1a1a1a;
+    border-radius: 3px;
+  }
