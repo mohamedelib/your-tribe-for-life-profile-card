@@ -42,3 +42,12 @@
     </nav>
   </section>
 </main>
+
+<style>
+  :global(body) {
+    background: #060606;
+    color: #e8e8e8;
+    font-family: system-ui, sans-serif;
+    padding: 3rem 1.25rem;
+  }
+
