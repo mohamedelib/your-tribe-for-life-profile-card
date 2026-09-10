@@ -30,14 +30,13 @@
   <section>
     <h2>Contact</h2>
     <nav>
-      <a href="https://github.com/mohamed">
-        <p>github github.com/mohamed</p>
+      <a href="https://github.com/mohamedelib">
+        <p>Github</p>
         <span>→</span></a
       >
 
-      <a href="https://linkedin.com/in/mohamed"
+      <a href="https://linkedin.com/mohamedelib"
         ><p>Instagram</p>
-        linkedin.com/in/mohamed
         <span>→</span></a
       >
     </nav>
