@@ -72,3 +72,9 @@
   h1 span {
     color: #c22;
   }
+
+  header p {
+    color: #666;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+  }
