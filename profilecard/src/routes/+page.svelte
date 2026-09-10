@@ -1,7 +1,14 @@
 <!-- Header -->
 
 <header>
-  <img src="src/lib/assets/mo.jpg" alt="Mohamed El Ibrahymy" />
+  <picture>
+    <source srcset="src/lib/assets/mo.webp" type="image/webp" />
+    <img
+      src="src/lib/assets/mo.jpg"
+      alt="Mohamed El Ibrahymy"
+      fetchpriority="high"
+    />
+  </picture>
   <article>
     <h1>Mohamed <span>El Ibrahymy</span></h1>
     <p>Frontend Developer</p>
