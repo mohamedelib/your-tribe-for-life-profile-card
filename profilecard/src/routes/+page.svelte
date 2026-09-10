@@ -87,12 +87,12 @@
   }
 
   section {
-    max-width: 520px;
-    margin-inline: auto;
-    align-content: center;
   }
 
   section {
+    max-width: 520px;
+    margin-inline: auto;
+    align-content: center;
     min-height: 100svh;
     padding: 3rem 1.25rem;
     animation: show linear both;
@@ -135,15 +135,9 @@
     text-decoration: none;
     color: #e8e8e8;
     font-size: 0.85rem;
-    transition: color 0.3s;
-  }
-
-  nav a span {
-    color: #666;
     transition:
       translate 0.3s,
       color 0.3s;
-
     &:hover {
       color: #c22;
       translate: 5px 0;
