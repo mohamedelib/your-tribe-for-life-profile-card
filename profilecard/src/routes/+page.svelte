@@ -31,12 +31,12 @@
     <h2>Contact</h2>
     <nav>
       <a href="https://github.com/mohamedelib">
-        <p>Github</p>
+        <span>Github</span>
         <span>→</span></a
       >
 
       <a href="https://linkedin.com/mohamedelib"
-        ><p>Instagram</p>
+        ><span>Instagram</span>
         <span>→</span></a
       >
     </nav>
@@ -135,10 +135,19 @@
     text-decoration: none;
     color: #e8e8e8;
     font-size: 0.85rem;
+    transition: color 0.3s;
   }
 
   nav a span {
     color: #666;
+    transition:
+      translate 0.3s,
+      color 0.3s;
+
+    &:hover {
+      color: #c22;
+      translate: 5px 0;
+    }
   }
 
   @media (min-width: 40em) {
