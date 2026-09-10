@@ -90,6 +90,9 @@
   section {
     min-height: 100svh;
     padding: 3rem 1.25rem;
+    animation: show linear both;
+    animation-timeline: view();
+    animation-range: entry;
   }
 
   section h2 {
@@ -143,6 +146,13 @@
 
     h1 {
       font-size: 2.8rem;
+    }
+  }
+
+  @keyframes show {
+    from {
+      opacity: 0;
+      scale: 0.5;
     }
   }
 </style>
