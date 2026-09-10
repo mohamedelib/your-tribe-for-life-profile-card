@@ -158,4 +158,11 @@
       scale: 0.5;
     }
   }
+
+  @keyframes entrance {
+    from {
+      opacity: 0;
+      translate: 0 30px;
+    }
+  }
 </style>
