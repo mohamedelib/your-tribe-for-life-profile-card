@@ -62,3 +62,13 @@
     object-fit: cover;
     border-radius: 4px;
   }
+
+  h1 {
+    font-size: 2rem;
+    line-height: 1.1;
+    margin-top: 1.5rem;
+  }
+
+  h1 span {
+    color: #c22;
+  }
