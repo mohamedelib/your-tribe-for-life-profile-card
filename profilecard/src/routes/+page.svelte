@@ -51,3 +51,8 @@
     padding: 3rem 1.25rem;
   }
 
+  header {
+    text-align: center;
+    padding-block: 4rem;
+  }
+
