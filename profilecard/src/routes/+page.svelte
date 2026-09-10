@@ -51,6 +51,7 @@
     margin: 0;
   }
 
+  /* Header */
   header {
     text-align: center;
     max-width: 520px;
@@ -62,33 +63,30 @@
     padding: 3rem 1.25rem;
 
     animation: entrance 0.8s ease both;
+
+    img {
+      max-width: 200px;
+      box-shadow: 0 0 30px rgba(204, 34, 34, 0.25);
+      border-radius: 10px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      line-height: 1.1;
+      margin-top: 1.5rem;
+    }
+
+    h1 span {
+      color: #c22;
+    }
+    p {
+      color: grey;
+      font-size: 0.8rem;
+      margin-top: 0.5rem;
+    }
   }
 
-  header img {
-    max-width: 200px;
-    box-shadow: 0 0 30px rgba(204, 34, 34, 0.25);
-    border-radius: 10px;
-  }
-
-  h1 {
-    font-size: 2rem;
-    line-height: 1.1;
-    margin-top: 1.5rem;
-  }
-
-  h1 span {
-    color: #c22;
-  }
-
-  header p {
-    color: #666;
-    font-size: 0.8rem;
-    margin-top: 0.5rem;
-  }
-
-  section {
-  }
-
+  /* Algemene section styling */
   section {
     max-width: 520px;
     margin-inline: auto;
@@ -98,18 +96,18 @@
     animation: show linear both;
     animation-timeline: view();
     animation-range: entry;
-  }
 
-  section h2 {
-    font-size: 0.7rem;
-    color: #c22;
-    font-weight: 500;
-    margin-bottom: 1rem;
-  }
+    h2 {
+      font-size: 0.7rem;
+      color: #c22;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
 
-  section p {
-    color: #bbb;
-    line-height: 1.75;
+    p {
+      color: #bbb;
+      line-height: 1.75;
+    }
   }
 
   ul {
@@ -127,6 +125,7 @@
     border-radius: 3px;
   }
 
+  /* Nav */
   nav a {
     display: flex;
     justify-content: space-between;
@@ -144,19 +143,19 @@
     }
   }
 
+  /* Responsiveness */
   @media (min-width: 40em) {
     header {
       max-width: 700px;
       grid-template-columns: auto 1fr;
       gap: 2.5rem;
       text-align: left;
-    }
 
-    h1 {
-      font-size: 2.8rem;
+      h1 {
+        font-size: 2.8rem;
+      }
     }
   }
-
   @keyframes show {
     from {
       opacity: 0;
