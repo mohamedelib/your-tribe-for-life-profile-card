@@ -48,19 +48,20 @@
     background: #060606;
     color: #e8e8e8;
     font-family: system-ui, sans-serif;
-    padding: 3rem 1.25rem;
+    margin: 0;
   }
 
   header {
     text-align: center;
-    padding-block: 4rem;
+    max-width: 520px;
+    margin-inline: auto;
+    display: grid;
+    place-items: center;
+    justify-items: center;
   }
 
   header img {
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 4px;
+    max-width: 200px;
   }
 
   h1 {
@@ -82,7 +83,13 @@
   section {
     max-width: 520px;
     margin-inline: auto;
-    padding-block: 3rem;
+    align-content: center;
+  }
+
+  header,
+  section {
+    min-height: 100svh;
+    padding: 3rem 1.25rem;
   }
 
   section h2 {
@@ -128,11 +135,10 @@
 
   @media (min-width: 40em) {
     header {
-      display: flex;
-      align-items: center;
+      max-width: 700px;
+      grid-template-columns: auto 1fr;
       gap: 2.5rem;
       text-align: left;
-      justify-content: center;
     }
 
     h1 {
