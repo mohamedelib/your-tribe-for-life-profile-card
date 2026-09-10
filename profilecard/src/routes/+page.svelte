@@ -91,3 +91,9 @@
     font-weight: 500;
     margin-bottom: 1rem;
   }
+
+  section p {
+    color: #bbb;
+    line-height: 1.75;
+  }
+
