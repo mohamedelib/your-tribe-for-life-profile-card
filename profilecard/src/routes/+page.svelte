@@ -36,7 +36,7 @@
         <span>→</span></a
       >
 
-      <a href="https://linkedin.com/mohamedelib"
+      <a href="https://www.instagram.com/mo.eliiiii/"
         ><span>Instagram</span>
         <span>→</span></a
       >
@@ -45,10 +45,11 @@
 </main>
 
 <style>
+  @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap");
   :global(body) {
     background: #060606;
     color: #e8e8e8;
-    font-family: system-ui, sans-serif;
+    font-family: "Outfit", sans-serif;
     margin: 0;
   }
 
