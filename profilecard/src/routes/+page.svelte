@@ -84,3 +84,10 @@
     margin-inline: auto;
     padding-block: 3rem;
   }
+
+  section h2 {
+    font-size: 0.7rem;
+    color: #c22;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
