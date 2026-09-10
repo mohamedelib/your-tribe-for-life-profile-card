@@ -66,6 +66,8 @@
 
   header img {
     max-width: 200px;
+    box-shadow: 0 0 30px rgba(204, 34, 34, 0.25);
+    border-radius: 10px;
   }
 
   h1 {
