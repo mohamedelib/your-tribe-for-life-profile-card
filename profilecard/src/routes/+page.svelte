@@ -111,3 +111,18 @@
     border: 1px solid #1a1a1a;
     border-radius: 3px;
   }
+
+  nav a {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid #1a1a1a;
+    text-decoration: none;
+    color: #e8e8e8;
+    font-size: 0.85rem;
+  }
+
+  nav a span {
+    color: #666;
+  }
+
