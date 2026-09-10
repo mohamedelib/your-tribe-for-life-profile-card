@@ -1,3 +1,5 @@
+<!-- Header -->
+
 <header>
   <img
     src="src/lib/assets/mo.jpg"
@@ -11,6 +13,8 @@
   </article>
 </header>
 
+<!-- Over mij -->
+
 <main>
   <section>
     <h2>Over mij</h2>
@@ -20,6 +24,7 @@
     </p>
   </section>
 
+  <!-- Feiten -->
   <section>
     <h2>Feiten</h2>
     <ul>
@@ -27,6 +32,7 @@
     </ul>
   </section>
 
+  <!-- Contact -->
   <section>
     <h2>Contact</h2>
     <nav>
