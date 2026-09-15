@@ -8,11 +8,7 @@
 <header>
   <picture>
     <source srcset="src/lib/assets/mo.webp" type="image/webp" />
-    <img
-      src="src/lib/assets/mo.jpg"
-      alt="Mohamed El Ibrahymy"
-      fetchpriority="high"
-    />
+    <img src={person.avatar} alt={person.name} fetchpriority="high" />
   </picture>
   <article>
     <h1>Mohamed <span>El Ibrahymy</span></h1>
@@ -26,16 +22,20 @@
   <section>
     <h2>Over mij</h2>
     <p>
-      Frontend developer in opleiding aan de Hogeschool van Amsterdam BLA BLA
-      BLA BLA BALB
+      {person.bio}
     </p>
   </section>
 
   <!-- Feiten -->
-  <section>
+  <section class="facts">
     <h2>Feiten</h2>
     <ul>
-      <li></li>
+      <li><span>Favoriete hobby:</span> <span>{person.fav_hobby}</span></li>
+      <li><span>Favoriete dier:</span> <span>{person.fav_animal}</span></li>
+      <li><span>Favoriete seizoen:</span> <span>{person.fav_season}</span></li>
+      <li><span>Favoriete soep:</span> <span>{person.fav_soup}</span></li>
+      <li><span>Favoriete fruit:</span> <span>{person.fav_fruit}</span></li>
+      <li><span>Schoenmaat:</span> <span>{person.shoe_size}</span></li>
     </ul>
   </section>
 
@@ -43,7 +43,7 @@
   <section>
     <h2>Contact</h2>
     <nav>
-      <a href="https://github.com/mohamedelib">
+      <a href="https://github.com/{person.github_handle}">
         <span>Github</span>
         <span>→</span></a
       >
@@ -128,19 +128,35 @@
     }
   }
 
-  ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-  }
+  .facts {
+    ul {
+      list-style: none;
+      padding: 0;
+    }
 
-  li {
-    font-size: 0.75rem;
-    color: #666;
-    padding: 0.35rem 0.8rem;
-    border: 1px solid #1a1a1a;
-    border-radius: 3px;
+    li {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 0;
+      border-bottom: 1px solid #333;
+      padding: 1rem 0;
+      border-bottom: 1px solid #1a1a1a;
+      font-size: 0.85rem;
+      transition: translate 0.3s;
+
+      &:hover {
+        translate: 5px 0;
+      }
+
+      span:first-child {
+        color: #888;
+      }
+
+      span:last-child {
+        color: #e8e8e8;
+        font-weight: 500;
+      }
+    }
   }
 
   /* Nav */
