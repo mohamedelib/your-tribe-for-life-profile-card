@@ -7,6 +7,5 @@ export async function load() {
       fields: ["*"],
     }),
   );
-  console.log(person);
   return { person };
 }
