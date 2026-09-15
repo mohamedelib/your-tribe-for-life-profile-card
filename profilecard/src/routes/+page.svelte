@@ -27,7 +27,10 @@
     <img src={person.avatar} alt={person.name} fetchpriority="high" />
   </picture>
   <article>
-    <h1>Mohamed <span>El Ibrahymy</span></h1>
+    <h1>
+      <span class="first">Mohamed</span>
+      <span class="last">El Ibrahymy</span>
+    </h1>
     <p>Frontend Developer</p>
   </article>
 </header>
@@ -117,6 +120,24 @@
       color: grey;
       font-size: 0.8rem;
       margin-top: 0.5rem;
+    }
+
+    .first,
+    .last,
+    p {
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    .first {
+      animation-delay: 0.3s;
+    }
+    .last {
+      color: white;
+      animation-delay: 0.5s;
+    }
+    p {
+      animation-delay: 0.7s;
     }
   }
 
@@ -269,6 +290,17 @@
     from {
       opacity: 0;
       translate: 0 30px;
+    }
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      translate: 0 20px;
+    }
+    to {
+      opacity: 1;
+      translate: 0 0;
     }
   }
 </style>
