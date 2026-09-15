@@ -184,12 +184,26 @@
     text-decoration: none;
     color: #e8e8e8;
     font-size: 0.85rem;
+    position: relative;
     transition:
       translate 0.3s,
       color 0.3s;
     &:hover {
-      color: #c22;
       translate: 5px 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: #c22;
+      transition: width 0.6s ease;
+    }
+    &:hover::after {
+      width: 100%;
     }
   }
 
@@ -215,6 +229,7 @@
       color: #060606;
     }
   }
+
   /* Responsiveness */
   @media (min-width: 40em) {
     header {
