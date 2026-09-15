@@ -1,3 +1,8 @@
+<script>
+  let { data } = $props();
+  const { person } = data;
+</script>
+
 <!-- Header -->
 
 <header>
