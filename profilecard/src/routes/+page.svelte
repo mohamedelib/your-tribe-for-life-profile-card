@@ -1,8 +1,24 @@
 <script>
+  // Data ophalen
   let { data } = $props();
   const { person } = data;
+
+  // Back to top
+  let visible = $state(false);
+
+  function handleScroll() {
+    visible = window.scrollY > 500;
+  }
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
 </script>
 
+<svelte:window onscroll={handleScroll} />
+{#if visible}
+  <button class="back-to-top" onclick={scrollToTop}>↑</button>
+{/if}
 <!-- Header -->
 
 <header>
@@ -177,6 +193,28 @@
     }
   }
 
+  .back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+    border: 1px solid #333;
+    background: #c22;
+    color: #e8e8e8;
+    font-size: 2rem;
+    cursor: pointer;
+    transition:
+      background 0.3s,
+      border-color 0.3s;
+
+    &:hover {
+      background: #e8e8e8;
+      border-color: #e8e8e8;
+      color: #060606;
+    }
+  }
   /* Responsiveness */
   @media (min-width: 40em) {
     header {
