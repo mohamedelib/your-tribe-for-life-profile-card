@@ -1,16 +1,36 @@
+<script>
+  // Data ophalen
+  let { data } = $props();
+  const { person } = data;
+
+  // Back to top
+  let visible = $state(false);
+
+  function handleScroll() {
+    visible = window.scrollY > 500;
+  }
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+</script>
+
+<svelte:window onscroll={handleScroll} />
+{#if visible}
+  <button class="back-to-top" onclick={scrollToTop}>↑</button>
+{/if}
 <!-- Header -->
 
 <header>
   <picture>
     <source srcset="src/lib/assets/mo.webp" type="image/webp" />
-    <img
-      src="src/lib/assets/mo.jpg"
-      alt="Mohamed El Ibrahymy"
-      fetchpriority="high"
-    />
+    <img src={person.avatar} alt={person.name} fetchpriority="high" />
   </picture>
   <article>
-    <h1>Mohamed <span>El Ibrahymy</span></h1>
+    <h1>
+      <span class="first">Mohamed</span>
+      <span class="last">El Ibrahymy</span>
+    </h1>
     <p>Frontend Developer</p>
   </article>
 </header>
@@ -21,16 +41,20 @@
   <section>
     <h2>Over mij</h2>
     <p>
-      Frontend developer in opleiding aan de Hogeschool van Amsterdam BLA BLA
-      BLA BLA BALB
+      {person.bio}
     </p>
   </section>
 
   <!-- Feiten -->
-  <section>
+  <section class="facts">
     <h2>Feiten</h2>
     <ul>
-      <li></li>
+      <li><span>Favoriete hobby:</span> <span>{person.fav_hobby}</span></li>
+      <li><span>Favoriete dier:</span> <span>{person.fav_animal}</span></li>
+      <li><span>Favoriete seizoen:</span> <span>{person.fav_season}</span></li>
+      <li><span>Favoriete soep:</span> <span>{person.fav_soup}</span></li>
+      <li><span>Favoriete fruit:</span> <span>{person.fav_fruit}</span></li>
+      <li><span>Schoenmaat:</span> <span>{person.shoe_size}</span></li>
     </ul>
   </section>
 
@@ -38,7 +62,7 @@
   <section>
     <h2>Contact</h2>
     <nav>
-      <a href="https://github.com/mohamedelib">
+      <a href="https://github.com/{person.github_handle}">
         <span>Github</span>
         <span>→</span></a
       >
@@ -97,6 +121,24 @@
       font-size: 0.8rem;
       margin-top: 0.5rem;
     }
+
+    .first,
+    .last,
+    p {
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    .first {
+      animation-delay: 0.3s;
+    }
+    .last {
+      color: white;
+      animation-delay: 0.5s;
+    }
+    p {
+      animation-delay: 0.7s;
+    }
   }
 
   /* Algemene section styling */
@@ -123,19 +165,35 @@
     }
   }
 
-  ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-  }
+  .facts {
+    ul {
+      list-style: none;
+      padding: 0;
+    }
 
-  li {
-    font-size: 0.75rem;
-    color: #666;
-    padding: 0.35rem 0.8rem;
-    border: 1px solid #1a1a1a;
-    border-radius: 3px;
+    li {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 0;
+      border-bottom: 1px solid #333;
+      padding: 1rem 0;
+      border-bottom: 1px solid #1a1a1a;
+      font-size: 0.85rem;
+      transition: translate 0.3s;
+
+      &:hover {
+        translate: 5px 0;
+      }
+
+      span:first-child {
+        color: #888;
+      }
+
+      span:last-child {
+        color: #e8e8e8;
+        font-weight: 500;
+      }
+    }
   }
 
   /* Nav */
@@ -147,12 +205,49 @@
     text-decoration: none;
     color: #e8e8e8;
     font-size: 0.85rem;
+    position: relative;
     transition:
       translate 0.3s,
       color 0.3s;
     &:hover {
-      color: #c22;
       translate: 5px 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: #c22;
+      transition: width 0.6s ease;
+    }
+    &:hover::after {
+      width: 100%;
+    }
+  }
+
+  .back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+    border: 1px solid #333;
+    background: #c22;
+    color: #e8e8e8;
+    font-size: 2rem;
+    cursor: pointer;
+    transition:
+      background 0.3s,
+      border-color 0.3s;
+
+    &:hover {
+      background: #e8e8e8;
+      border-color: #e8e8e8;
+      color: #060606;
     }
   }
 
@@ -195,6 +290,17 @@
     from {
       opacity: 0;
       translate: 0 30px;
+    }
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      translate: 0 20px;
+    }
+    to {
+      opacity: 1;
+      translate: 0 0;
     }
   }
 </style>
